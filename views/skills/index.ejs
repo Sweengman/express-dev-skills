@@ -1,0 +1,20 @@
+<%- include('../partials/header') %>
+<h1>All Skills</h1>
+<ul><% console.log(skills) %>
+    <% skills.forEach(function(s) { %>
+        <li>
+            <% console.log('loop') %>
+            <form action="/skills/<%= s[s] %>?_method=DELETE"
+                class="delete-form" method="POST">
+                <button type="submit">X</button>
+              </form>
+
+            <a href="/skills/<%= s[s] %>"><%= s %></a>
+        </li>
+    <% }) %>
+</ul>
+<a href="/skills/new">Add a Skill</a>
+
+<%- include('../partials/footer') %>
+
+    
